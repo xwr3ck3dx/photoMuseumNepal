@@ -8,10 +8,11 @@
     
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/glide.core.css">
+    <!-- <link rel="stylesheet" href="assets/css/glide.core.css"> -->
     <link rel="stylesheet" href="assets/css/card-slider-style.css">
     <link rel="stylesheet" href="assets/css/sliderstyle.css">
-    <link rel="stylesheet" href="assets/css/albery.css">
+    <!-- <link rel="stylesheet" href="assets/css/albery.css"> -->
+    <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -179,56 +180,21 @@
             </div>
         </div>
         <div class="content bg-dark">
-            
-                    <div class="albery-container" style="clear:both">
-
-                        <div class="albery-wrapper">
-                        
-                            <div class="albery-item">
-                                <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            <div class="albery-item">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            <div class="albery-item">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            <div class="albery-item">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            <div class="albery-item">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>
-                           
-                        
-                        </div>
-                        
-                        <div class="move-right">
-                            <a href="#" id="rightArrow"></a>
-                        </div>
-                        <div class="move-left">
-                            <a href="#" id="leftArrow"></a>
-                        </div>
-                          
-                    </div>
-                    <div class="pagination-container">
-                        <div class="pagination-wrapper">
-                            <div class="pagination-item" data-item="1">
-                                <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            <div class="pagination-item" data-item="1">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            <div class="pagination-item" data-item="1">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>  
-                            <div class="pagination-item" data-item="1">
-                                    <img src="assets/img/test.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                    </div>
-            
+            <div class="container-gallery">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+                <img src="assets/img/test.jpg" alt="" srcset="">
+            </div>
         </div>
         <div class="content">
                 <div class="story row">
@@ -342,20 +308,46 @@
     <script src="assets/js/card-slider-min.js"></script>
     <script src="assets/js/slider.jquery.js"></script>
     <script src="assets/js/albery.js"></script>
+    <script src="assets/js/gallery.js"></script>
     
     <script>
         $(document).ready(function(){
-            $(".albery-container").albery({
-                speed: 200, // default: 200
-                imgWidth: $('.content').width(), // default: 600
-                paginationItemWidth: 116,
-                paginationBorder: 5
+            // $(".albery-container").albery({
+            //     speed: 200, // default: 200
+            //     imgWidth: $('.content').width(), // default: 600
+            //     paginationItemWidth: 116,
+            //     paginationBorder: 5
 
-            });
+            // });
             
             $(".banner-main").css('background-image',"url("+$('.banner-main').attr('data-bgImg')+")");
 
-
+            $('.container-gallery').gallery({
+                height: 650,
+                items: 6,
+                480: {
+                    items: 2,
+                    height: 400,
+                    thmbHeight: 100
+                },
+                768: {
+                    
+                    items: 3,
+                    height: 500,
+                    thmbHeight: 120
+                },
+                600: {
+                    
+                    items: 4
+                },
+                992 : {
+                    
+                    items: 5,
+                    height: 350
+                },
+                singleLine: true,
+                
+            });
 
             // $('.img-content .col-md-3 img-container').each(function(e){
             //     $(this).mouseover(function(){
@@ -369,7 +361,7 @@
 
 
             $('.imgs-featured .img-content').slick({
-                
+                arrows:false,
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 autoplay: true,
