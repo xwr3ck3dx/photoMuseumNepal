@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/card-slider-style.css">
     <link rel="stylesheet" href="assets/css/sliderstyle.css">
     <link rel="stylesheet" href="assets/css/albery.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -52,7 +53,21 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, maxime.
                     </div>
                     <div class="main-news-image">
-                            <img src="assets/img/test.jpg" alt="" class="news-img img-fluid">
+                        <div class="container-mainImg-gallery">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                            <img src="assets/img/test.jpg" alt="" srcset="">
+                        </div>
                     </div>
                     
                     <div class="main-news-details">
@@ -302,9 +317,39 @@
     <script src="assets/js/card-slider-min.js"></script>
     <script src="assets/js/slider.jquery.js"></script>
     <script src="assets/js/albery.js"></script>
+    <script src="assets/js/gallery.js"></script>
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     <script>
        $(document).ready(function(){
+
+        $('.container-mainImg-gallery').gallery({
+                height: 650,
+                items: 4,
+                480: {
+                    items: 2,
+                    height: 400,
+                    thumbHeight: 50
+                },
+                768: {
+                    
+                    items: 6,
+                    height: 500,
+                    thumbHeight: 80
+                },
+                600: {
+                    
+                    items: 4,
+                    thumbHeight: 50
+                },
+                992 : {
+                    
+                    items: 5,
+                    height: 350,
+                    thumbHeight: 50
+                },
+                singleLine: true,
+                
+            });
            $('.related-news').slick({
                 arrows:false,
                 slidesToShow: 4,
