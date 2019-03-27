@@ -122,7 +122,10 @@ footer a{
 
 .img-content .img-container{
     position: relative;
+    
 }
+
+
 .img-content .img-container .img-details{
     position: absolute;
     bottom:0;
@@ -301,6 +304,10 @@ footer a{
     margin-top:60px;
     background: #fff
 }
+.contactus{
+    margin-top:60px;
+    background: #fff
+}
 
 
 .news-detail .main-news-details{
@@ -352,4 +359,18 @@ footer a{
 
 .prev-button, .next-button{
     box-sizing: content-box!important;
+}
+
+
+
+
+.contactus{
+    padding: 2% 0 10%;
+    text-align: left;
+    margin-bottom:0;
+}
+
+.contactus .btn-primary{
+    background: #383838;
+    border:transparent;
 }

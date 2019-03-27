@@ -133,7 +133,7 @@
                             </div>
                     </div>
                     <div class=" img-container">
-                            <img src="assets/img/test.jpg" class="img-fluid" alt="" srcset="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4rgdlDW7kAper7MecSEcA2LF0Nyuh-lQmY1CaSSnZGff_fHNm" class="img-fluid" alt="" srcset="">
                             <div class="img-details">
                                 <div class="img-title">
                                     Swayambhunath
@@ -367,9 +367,22 @@
                 autoplay: true,
                 autoplaySpeed: 1000,
             })
+            slickresize();
+            
            
             
         })
+        $(window).resize(function(){
+            slickresize();
+        });
+        function slickresize(){
+            
+                var slickHeight =$('.slick-slide[data-slick-index=1]').height();
+                $('.slick-slide .img-container img').css('max-height','100%');
+                $('.slick-slide .img-container img').css('margin','0 auto');
+
+                $('.slick-slide .img-container').height(slickHeight);
+        }
     </script>
 </body>
 </html>
