@@ -157,18 +157,30 @@ footer a{
     max-width: 1200px;
     margin:0 auto;
 }
+.mainContainer.img-detail{
+    /* max-width: 1200px; */
+    margin:0 auto;
+}
 .news .menu .navbar, .news-detail .menu .navbar{
     background: #333333;
     height:60px;
      
 }
-
+.img-detail .menu .navbar {
+    background: #333333;
+    height:60px;
+     
+}
 .content.main-news{
     margin-top:60px;
     background: #fff
 }
+.content.main-img{
+    margin-top:60px;
+    background: #fff
+}
 .main-news-title{
-    font-size:2em;
+    font-size:1.8em;
     max-width:900px;
     margin:0 auto;
     line-height: .9;
@@ -180,16 +192,40 @@ footer a{
     display:flex;
     margin:0 auto;
 }
-.main-news-image{
-    
-    
 
-}
 .main-news-details{
     margin-top:30px;
 }
 
 .main-news-details .full-news{
+    color:tomato;
+    font-size:1.5em;
+    font-weight: 400;
+}
+
+
+
+.content.main-img{
+    margin-top:60px;
+    background: #fff
+}
+.main-img-title{
+    font-size:1em;
+    
+    margin:0 auto;
+    line-height: .9;
+    font-weight: 600;
+    margin-bottom:20px;
+}
+.main-img-image img{
+    max-height:500px;
+    display:flex;
+    margin:0 auto;
+}
+
+
+
+.main-img-details .full-img{
     color:tomato;
     font-size:1.5em;
     font-weight: 400;
@@ -304,6 +340,16 @@ footer a{
     margin-top:60px;
     background: #fff
 }
+
+.main-img{
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.288);
+}
+
+.main-details-img{
+    margin-top:60px;
+    background: #fff;
+    margin-bottom:0
+}
 .contactus{
     margin-top:60px;
     background: #fff
@@ -321,6 +367,16 @@ footer a{
     /* margin-top:20px; */
 }
 
+.img-detail .main-img-details{
+    text-align: justify;
+    /* margin-top:10px; */
+}
+.img-detail .main-img-title{
+    text-align: left;
+    max-width:100%;
+    /* margin:0; */
+    /* margin-top:20px; */
+}
 
 .main-details-news .news-short{
     text-align:left;
@@ -328,6 +384,18 @@ footer a{
 
 .main-details-news .main-news-owner{
     font-size:.8em;
+    font-weight: 400;
+    display:block;
+    text-align:left;
+    font-style: oblique
+}
+
+.main-details-img .img-short{
+    text-align:left;
+}
+
+.main-details-img .main-img-owner{
+    font-size:2em;
     font-weight: 400;
     display:block;
     text-align:left;
@@ -373,4 +441,102 @@ footer a{
 .contactus .btn-primary{
     background: #383838;
     border:transparent;
+}
+
+
+
+
+.img-pills .img-post{
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.288);
+    padding:20px 10px;
+    background:white;
+    margin-bottom:20px!important;
+}
+
+
+
+.img-pills .img-details{
+    text-align: left;
+    /* padding: 20px; */
+}
+.img-pills .img-img{
+    padding-top:10px;
+}
+
+.img-pills .img-details .img-title{
+    font-size:1.1em;
+    font-weight:700;
+}
+
+.img-pills .tab-content{
+    background:white;
+}
+
+
+.content.main-details-img{
+    padding:0;
+    
+  
+}
+.main-img-container{
+    padding:0
+}
+.img-container-details{
+    background:rgb(70, 70, 70);
+    padding: 20px 0px;
+}
+.main-img-image{
+    padding:0;
+    max-width: 900px;
+    margin: 0 auto;
+    
+}
+
+.img-comments{
+    max-width:1000px;
+    margin:0 auto;
+    padding-top:30px;
+}
+.img-comments .img-comments-left,.img-comments .img-comments-right{
+    float: left;
+    padding-bottom:30px;
+}
+
+
+.comment-box{
+    width:100%;
+    resize: none;
+    padding: 5px 10px;
+}
+
+.comment .user img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.comment .user{
+    padding:10px 0;
+    text-align: center
+}
+
+ .tracker{
+    text-align: center
+}
+
+ .tags {
+    text-align: left;
+    padding: 0 10px;
+}
+.tags .all-tags{
+    margin-top:5px;
+    line-height: 16px
+}
+.tags .tag-item{
+    background:rgb(199, 199, 199);
+    padding:2px 6px 4px;
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+    /* line-height: 16px; */
+    vertical-align: middle
 }
