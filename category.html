@@ -189,12 +189,13 @@
                    </div>
                 </div>
             
-                <div class="col-md-9">
+                <div class="col-md-9 col-sm-12">
                     <div class="category-top ">
                         Lorem ipsum dolor sit amet.
                     </div>
                     <div class="image-grid row">
-                      <div class="image-grid-item col-md-4">
+                        <div class="grid-sizer"></div>
+                      <div class="image-grid-item col-md-4 ">
                           <img class="img-fluid" src="assets/img/test.jpg" alt="" srcset="">
                       </div>
                       <div class="image-grid-item col-md-4">
@@ -356,6 +357,7 @@
           
            $('.image-grid').masonry({
               itemSelector: '.image-grid-item',
+              columnWidth: '.grid-sizer'
               
            });
         })
