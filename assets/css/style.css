@@ -175,6 +175,10 @@ footer a{
     margin-top:60px;
     background: #fff
 }
+.content.main-category{
+    margin-top:60px;
+    background: #fff
+}
 .content.main-img{
     margin-top:60px;
     background: #fff
@@ -251,7 +255,7 @@ footer a{
 .news-pills, .news-pills > [class*=col]{
     padding:20px 0
 }
-.news-pills .news-top, .news-detail .news-top{
+.news-pills .news-top, .news-detail .news-top, .main-category .category-top{
     text-align:left;
     text-transform: uppercase;
     font-weight:600;
@@ -539,4 +543,51 @@ footer a{
     cursor: pointer;
     /* line-height: 16px; */
     vertical-align: middle
+}
+
+.category-top{
+    clear: both
+}
+.category-menu{
+    padding:0px;
+    border: 1px solid rgba(138, 138, 138, 0.438)
+}
+.category-menu .category-menuitem{
+    display: block;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(138, 138, 138, 0.438);
+    color: black;
+
+
+}
+.category-menu a.category-menuitem:last-child{
+    border-bottom:0
+}
+.category-menutitle{
+    font-size:1.2em;
+    border-bottom:1px solid rgba(138, 138, 138, 0.438);
+    padding: 10px 0px;
+    background: rgba(223, 223, 223, 0.842);
+}
+
+
+.card .btn.btn-link{
+    color: black;
+    text-decoration: none;
+}
+.card .btn.btn-link:hover{
+    text-decoration: none;
+}
+
+.card .card-body{
+    padding: 0
+}
+.card .card-header{
+    padding: .15rem .5rem;
+}
+
+.image-grid-item.col-md-4{
+    padding: 0px 3px;
 }
