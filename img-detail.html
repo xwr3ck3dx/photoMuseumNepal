@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/albery.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery.js"></script>
 </head>
 <body>
     <div class="mainContainer img-detail">
@@ -54,18 +55,32 @@
                         <div class="main-img-image">
                             <div class="container-mainImg-gallery">
                                 <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
-                                <img src="assets/img/test.jpg" alt="" srcset="">
+                                <div class="gallery-roll">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="2" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="3" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                                        <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+
+                                    
+
+                                </div>
+                                <script>
+                                        $(".gallery-roll > img").on("click",function(e){
+                                            // console.log(e.target.id);
+                                            e.preventDefault();
+                                            $url= window.location.href + "/"+ e.target.id;
+                                            window.location=$url;
+                                        });
+                                    
+                                    </script>
                             </div>
                         </div>
                      </div>
@@ -82,7 +97,17 @@
                                     </div>
 
                                     <hr>
-
+                                    <div class="comment row">
+                                            <div class="user col-md-2">
+                                                <img src="assets/img/test.jpg" alt="" srcset="">
+                                            </div>
+                                            <div class="comment-box-ext col-md-10">
+                                                <div class="comment-name">
+                                                    Lorem, ipsum dolor.
+                                                </div>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos dolore expedita voluptate perspiciatis deleniti! Suscipit.
+                                            </div>
+                                    </div>
                                     <div class="comment row">
                                         <div class="user col-md-2">
                                             <img src="assets/img/test.jpg" alt="" srcset="">
@@ -372,9 +397,9 @@
 
 
 
-    <script src="assets/js/jquery.js"></script>
+    
     <script src="assets/js/bootstrap.js"></script>
-    <!-- <script src="assets/js/slick.js"></script> -->
+    <script src="assets/js/slick.js"></script>
     <script src="assets/js/glide.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/card-slider-min.js"></script>
@@ -384,32 +409,60 @@
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     <script>
        $(document).ready(function(){
+        $('.gallery-roll').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            arrows:false,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+        });
 
-        $('.container-mainImg-gallery').gallery({
-                height: 650,
-                items: 8,
-                thumbHeight:40,
+
+
+        // $('.container-mainImg-gallery').gallery({
+        //         height: 650,
+        //         items: 5,
+        //         thumbHeight:120,
                 
-                480: {
-                    items: 2,
-                    height: 400,
-                    thumbHeight: 50
-                },
+        //         480: {
+        //             items: 2,
+        //             height: 400,
+        //             thumbHeight: 50
+        //         },
                 
-                600: {
+        //         600: {
                     
-                    items: 8,
-                    thumbHeight: 50
-                },
-                992 : {
+        //             items: 5,
+        //             thumbHeight: 120
+        //         },
+        //         992 : {
                     
-                    items:8,
-                    height: 350,
-                    thumbHeight: 80
-                },
-                singleLine: true,
+        //             items:5,
+        //             height: 350,
+        //             thumbHeight: 120
+        //         },
+        //         singleLine: true,
                 
-            });
+        //     });
          
        })
     </script>

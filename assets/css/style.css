@@ -506,11 +506,23 @@ footer a{
     padding-bottom:30px;
 }
 
-
+.comment{
+    margin-bottom:15px!important;
+}
 .comment-box{
     width:100%;
     resize: none;
     padding: 5px 10px;
+}
+.comment-box-ext{
+    text-align: left;
+    padding-left: 0;
+    line-height:1.2em;
+}
+.comment-box-ext .comment-name{
+    font-weight: 600;
+    color:rgb(21, 21, 63);
+    line-height:1.5em;
 }
 
 .comment .user img{
@@ -600,4 +612,19 @@ footer a{
 
 .content.main-category{
     padding: 30px 0;
+}
+
+.container-mainImg-gallery .controls{
+    display: none;
+}
+.container-mainImg-gallery .thmb-wrap{
+    /* zoom:50%; */
+    margin: 0 auto;
+    text-align: center
+}
+
+.slick-list.draggable{
+    max-width: 600px;
+    margin:0 auto;
+    /* margin-top:-5%; */
 }
