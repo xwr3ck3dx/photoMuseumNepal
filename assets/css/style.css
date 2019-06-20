@@ -350,7 +350,7 @@ footer a{
 }
 
 .main-details-img{
-    margin-top:60px;
+    margin-top:0px;
     background: #fff;
     margin-bottom:0
 }
@@ -487,7 +487,7 @@ footer a{
 }
 .img-container-details{
     background:rgb(70, 70, 70);
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
 }
 .main-img-image{
     padding:0;
@@ -641,3 +641,5 @@ footer a{
 .js .slider-single > div:nth-child(1n+2) { display: none }
 
 .js .slider-single.slick-initialized > div:nth-child(1n+2) { display: block }
+
+
