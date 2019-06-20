@@ -405,7 +405,46 @@ footer a{
     text-align:left;
     font-style: oblique
 }
-
+@media (max-width:700px){
+    .main-img-owner{
+        font-size:1em!important;
+    }
+    .main-img-title{
+        font-size:.8em;
+    }
+    .comment-box-ext {
+        font-size:0.7em;
+    }
+    .comment-name{
+        font-size:.9em;
+    }
+    .comment-box{
+        padding:3px 5px!important;
+        font-size:.9em;
+    }
+    .tracker .col-md-2{
+        width:30%;
+    }
+    .tracker .col-md-3{
+        width:40%;
+    }
+    .img-comments-right.col-sm-6{
+        padding-bottom:10px!important;
+    }
+    .tracker hr{
+        margin-top:.6rem;
+        margin-bottom:.6rem;
+    }
+    .addToAny{
+        zoom:0.8;
+        margin:0 auto;
+        text-align:center;
+        margin-top:10px;
+        display: flex;
+        justify-content: center
+        
+    }
+}
 .addToAny{
     margin-top:20px;
 }
