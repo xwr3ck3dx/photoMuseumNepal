@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/glide.core.css">
     <link rel="stylesheet" href="assets/css/card-slider-style.css">
-    <link rel="stylesheet" href="assets/css/sliderstyle.css">
+    <!-- <link rel="stylesheet" href="assets/css/sliderstyle.css"> -->
     <link rel="stylesheet" href="assets/css/albery.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -105,27 +105,51 @@
                                 </script>
                             </div>
                         </div> -->
-
-                        <div class="slider slider-single">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
-
+                        <div class="test-img">
+                            <i class="arrow left"></i>
+                                <img class="prev-img" id="5" src="assets/img/test.jpg" alt="">
+                                <img class="img-fluid" src="assets/img/test test.jpg" id="1" alt="" srcset="">
+                                <img class="next-img" id="7" src="assets/img/test.jpg" alt="">
+                            <i class="arrow right"></i>
                         </div>
+                        <script>
+                            $('.arrow.left').on('click',function(e){
+                                var id =$('.test-img img.prev-img').attr('id');
+                                var base_url = window.location.origin;
+                                var url= base_url + window.location.pathname+"/"+ id;
+                                window.location=url;
+                                // console.log(id);
+                            })
+                            $('.arrow.right').on('click',function(e){
+                                var id =$('.test-img img.next-img').attr('id');
+                                var base_url = window.location.origin;
+                                var url= base_url + window.location.pathname+"/"+ id;
+                                window.location=url;
+                                // console.log(url);
+                            })
+
+                        </script>
+                        <!-- <div class="slider slider-single">
+                            <img src="assets/img/test test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img src="assets/img/test.jpg" id="1" alt="" srcset="">
+
+                        </div> -->
                         <div class="slider slider-nav">
                             <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
                             <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
                             <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
-                            <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
+                            <img class="gotoUrl " src="assets/img/test test.jpg" id="1" alt="" srcset="">
+
                             <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
                             <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
                             <img class="gotoUrl" src="assets/img/test.jpg" id="1" alt="" srcset="">
@@ -472,6 +496,13 @@
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     <script>
        $(document).ready(function(){
+           $('.test-img img').css('max-height', window.innerHeight*0.9);
+           if(window.innerWidth<600){
+               $('.slider-nav.testnav').removeClass('testnav');
+           }else{
+            $('.slider-nav').addClass('testnav');
+           }
+        //    $('.test-img img').css('max-width', window.innerWidth*0.8);
         // $('.gallery-roll').slick({
         //     centerMode: true,
         //     centerPadding: '60px',
@@ -527,27 +558,30 @@
                 
         //     });
 
-        $('.slider-single').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            fade: false,
-            adaptiveHeight: true,
+        // $('.slider-single').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     arrows: true,
+        //     fade: false,
+        //     adaptiveHeight: true,
             
-            infinite: false,
-            useTransform: true,
-            speed: 400,
-            cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
-        });
+        //     infinite: false,
+        //     useTransform: true,
+        //     speed: 400,
+        //     cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        // })
+        // .on('setPosition', function (event, slick) {
+        //     slick.$('.slick-slide').css('height', slick.$('.slide-track').height() + 'px');
+        // });
 
-        $('.slider-nav').on('init', function(event, slick) {
-            $('.slider-nav .slick-slide.slick-current').addClass('is-active');
-        }).slick({
+        $('.slider-nav').slick({
             slidesToShow: 7,
             slidesToScroll: 7,
             dots: false,
             focusOnSelect: false,
-            infinite: false,
+            infinite: true,
+            adaptiveHeight: true,
+            
             responsive: [{
                 breakpoint: 1024,
                 settings: {
@@ -568,38 +602,39 @@
             }
             }]
         });
+        
 
-            $('.slider-single').on('afterChange', function(event, slick, currentSlide) {
-                $('.slider-nav').slick('slickGoTo', currentSlide);
-                var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
-                $('.slider-nav .slick-slide.is-active').removeClass('is-active');
-                $(currrentNavSlideElem).addClass('is-active');
-            });
+            // $('.slider-single').on('afterChange', function(event, slick, currentSlide) {
+            //     $('.slider-nav').slick('slickGoTo', currentSlide);
+            //     var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+            //     $('.slider-nav .slick-slide.is-active').removeClass('is-active');
+            //     $(currrentNavSlideElem).addClass('is-active');
+            // });
 
-            $('.slider-nav').on('click', '.slick-slide', function(event) {
-                event.preventDefault();
-                var goToSingleSlide = $(this).data('slick-index');
+            // $('.slider-nav').on('click', '.slick-slide', function(event) {
+            //     event.preventDefault();
+            //     var goToSingleSlide = $(this).data('slick-index');
 
-                $('.slider-single').slick('slickGoTo', goToSingleSlide);
-            });
+            //     $('.slider-single').slick('slickGoTo', goToSingleSlide);
+            // });
 
-
-            $(".slider-single .slick-arrow").prop("onclick", null).off("click");
-            $(".slider-single .slick-prev.slick-arrow.slick-disabled").removeClass("slick-disabled");
-            $(".slider-single .slick-arrow.slick-prev").on("click",function(){
-                var id =$(".slick-slide.slick-current.slick-active  img").attr("id");
-                var previd = parseInt(id)-1;
-                $url= window.location.href + "/"+ previd;
-                window.location=$url;
+            
+            // $(".slider-single .slick-arrow").prop("onclick", null).off("click");
+            // $(".slider-single .slick-prev.slick-arrow.slick-disabled").removeClass("slick-disabled");
+            // $(".slider-single .slick-arrow.slick-prev").on("click",function(){
+            //     var id =$(".slick-slide.slick-current.slick-active  img").attr("id");
+            //     var previd = parseInt(id)-1;
+            //     $url= window.location.href + "/"+ previd;
+            //     window.location=$url;
                 
-            })
-            $(".slider-single .slick-arrow.slick-next").on("click",function(){
-                var id =$(".slick-slide.slick-current.slick-active  img").attr("id");
-                var nextid = parseInt(id)+1;
-                $url= window.location.href + "/"+nextid;
-                window.location=$url;
+            // })
+            // $(".slider-single .slick-arrow.slick-next").on("click",function(){
+            //     var id =$(".slick-slide.slick-current.slick-active  img").attr("id");
+            //     var nextid = parseInt(id)+1;
+            //     $url= window.location.href + "/"+nextid;
+            //     window.location=$url;
                 
-            })
+            // })
                 
         })
     </script>

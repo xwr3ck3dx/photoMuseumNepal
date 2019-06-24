@@ -35,7 +35,7 @@
 	transform: translate(18.25%,-50%);
 	z-index: 1;
 }
-.slider>.navContainer{
+/* .slider>.navContainer{
 	width:49%;
 	height: 100%;
 	position: relative;
@@ -57,4 +57,4 @@
 }
 .slider>.navContainer>.leftClass{
 	left:0;
-}
+} */
