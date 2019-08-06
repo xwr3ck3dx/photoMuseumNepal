@@ -153,7 +153,7 @@ footer a{
     font-size: 0.8em;
     
 }
-.mainContainer.news ,.mainContainer.news-detail{
+.mainContainer.news ,.mainContainer.news-detail,.mainContainer.contact{
     max-width: 1200px;
     margin:0 auto;
 }
@@ -161,7 +161,7 @@ footer a{
     /* max-width: 1200px; */
     margin:0 auto;
 }
-.news .menu .navbar, .news-detail .menu .navbar{
+.news .menu .navbar, .news-detail .menu .navbar, .mainContainer.contact .menu .navbar{
     background: #333333;
     height:60px;
      
@@ -753,4 +753,13 @@ i:hover{
         max-height:100px;
     } */
 
+}
+.mainContainer.contact .content.contactus{
+    padding-top:40px;
+}
+.mainContainer.contact .card-body{
+    padding:1rem;
+}
+.mainContainer.contact i{
+    border:none;
 }

@@ -6,17 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/glide.core.css">
-    <link rel="stylesheet" href="assets/css/card-slider-style.css">
-    <link rel="stylesheet" href="assets/css/sliderstyle.css">
-    <link rel="stylesheet" href="assets/css/albery.css">
-    <link rel="stylesheet" href="assets/css/gallery.css">
+  
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="mainContainer news-detail">
+    <div class="mainContainer contact">
         <div class="menu">
             <nav class="navbar navbar-expand-lg navbar-light fixed-top">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +41,7 @@
         <div class="content contactus ">
             
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-header"><i class="fa fa-envelope"></i> Contact us.
                             </div>
@@ -72,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-4">
+                    <div class="col-md-6 col-sm-12">
                         <div class="card bg-light mb-3">
                             <div class="card-header  text-dark text-uppercase"><i class="fa fa-home"></i> Address</div>
                             <div class="card-body">
@@ -185,53 +179,9 @@
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/glide.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/card-slider-min.js"></script>
-    <script src="assets/js/slider.jquery.js"></script>
-    <script src="assets/js/albery.js"></script>
-    <script src="assets/js/gallery.js"></script>
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
-    <script>
-       $(document).ready(function(){
 
-        $('.container-mainImg-gallery').gallery({
-                height: 650,
-                items: 4,
-                480: {
-                    items: 2,
-                    height: 400,
-                    thumbHeight: 50
-                },
-                768: {
-                    
-                    items: 6,
-                    height: 500,
-                    thumbHeight: 80
-                },
-                600: {
-                    
-                    items: 4,
-                    thumbHeight: 50
-                },
-                992 : {
-                    
-                    items: 5,
-                    height: 350,
-                    thumbHeight: 50
-                },
-                singleLine: true,
-                
-            });
-           $('.related-news').slick({
-                arrows:false,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 5000,
-           });
-       })
-    </script>
+    <script src="assets/js/main.js"></script>
+
+    
 </body>
 </html>
