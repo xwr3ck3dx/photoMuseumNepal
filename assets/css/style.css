@@ -763,3 +763,8 @@ i:hover{
 .mainContainer.contact i{
     border:none;
 }
+
+
+.page-footer .footer{
+    max-width: 50%;
+}
