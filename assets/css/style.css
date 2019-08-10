@@ -161,7 +161,7 @@ footer a{
     /* max-width: 1200px; */
     margin:0 auto;
 }
-.news .menu .navbar, .news-detail .menu .navbar, .mainContainer.contact .menu .navbar{
+ .mainContainer .menu .navbar{
     background: #333333;
     height:60px;
      
@@ -341,7 +341,7 @@ footer a{
 }
 
 .main-details-news{
-    margin-top:60px;
+    /* margin-top:60px; */
     background: #fff
 }
 
@@ -355,7 +355,7 @@ footer a{
     margin-bottom:0
 }
 .contactus{
-    margin-top:60px;
+    /* margin-top:60px; */
     background: #fff
 }
 
