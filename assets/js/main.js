@@ -7,11 +7,14 @@ $(document).ready(function(){
     
 })
 $(window).scroll(function() {
-    if ($(this).scrollTop() >200) { // this refers to window
-       $('.navbar').addClass('scroll-nav');
-      
+    if(window.innerWidth()>500){
+        if ($(this).scrollTop() >200) { // this refers to window
+            $('.navbar').addClass('scroll-nav');
+           
+         }
+         else{
+             $('.navbar').removeClass('scroll-nav');
+         }
     }
-    else{
-        $('.navbar').removeClass('scroll-nav');
-    }
+    
 });
